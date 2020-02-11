@@ -209,3 +209,56 @@ function countSteps(state, robot, memory) {
 
   log(Object.prototype.hasOwnProperty.call(map, "one"));
   //true
+
+
+  //CHAPTER 5//
+  //flattening
+  let arrays = [[1,2,3],[4,5],[6]];
+  console.log(arrays.reduce((flat,current)=> flat.concat(current),[]));
+  //[1,2,3,4,5,6]
+
+
+
+  //exercise 2
+  //your own loop
+  function loop(start, test, update,body){
+    for(let value = start; test(value); value = update(value)){
+      body(value);
+    }
+  }
+
+  loop(3, n => n > 0, n=> n-1, console.log);
+  //3
+  //2
+  //1
+
+
+// exercise 3
+//everything
+
+function every(array , test){
+  for(let element of array){
+    if(!test(element)) return false;
+  }
+  return true;
+}
+
+function every2(array , test){
+  return !array.some(element => !test(element));
+}
+
+console.log(every([1,3,5] , n => n < 10 ));
+// true
+console.log(every([2, 4, 16], n => n < 10 ));
+// false
+console.log(every([], n => n < 10));
+//true
+
+//Dominant writing Direction
+function dominantDirection(text){
+  let counted = countBy(text , char => {
+    let script = characterScript(char.codePointAt(
+      return script ? script.direction :"none"
+    ))
+  })
+}
