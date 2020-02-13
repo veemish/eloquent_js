@@ -1,1 +1,1 @@
-# Eloquent_JavaScript_Chapter7
+# Eloquent_JavaScript
