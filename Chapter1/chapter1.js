@@ -1,0 +1,1 @@
+Chapter one does not have exercises
